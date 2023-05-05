@@ -47,3 +47,14 @@
 		width: 100% !important;
 	}
 }
+
+.ball{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #fff;
+	position: absolute;
+	z-index: 6;
+	display: none;
+	transform: translate(-50%, -50%);
+}
