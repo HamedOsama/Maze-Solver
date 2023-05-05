@@ -37,11 +37,11 @@
 		top: 0;
 		left: 0;
 		width: 100% !important;
-		height: 30%;
+		height: 35%;
 	}
 
 	#visualizer {
-		top: calc(30% + 10px);
+		top: calc(35% + 10px);
 		left: 0 !important;
 		height: 70% !important;
 		width: 100% !important;
