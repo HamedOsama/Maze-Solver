@@ -25,6 +25,7 @@ function maze_solvers_interval() {
 			if (path_list_index == path_list.length) {
 				place_to_cell(target_pos[0], target_pos[1]).classList.add("cell_path");
 				clearInterval(my_interval);
+				solving = false;
 				maze_solver_route();
 				return;
 			}
@@ -43,19 +44,19 @@ function maze_solver_route() {
 	my_interval = window.setInterval(function () {
 		if (index == path_list.length) {
 			const place = place_to_cell(target_pos[0], target_pos[1]).getBoundingClientRect();
-			ball.style.left = `${place.left - (place.width / 2)}px`;
+			ball.style.left = `${place.left + (place.width / 2)}px`;
 			ball.style.top = `${place.top + (place.height / 2)}px`;
+			place_to_cell(target_pos[0], target_pos[1]).classList.add("cell_path");
 			clearInterval(my_interval);
 			solving = false;
 			setTimeout(() => {
 				ball.style.display = "none";
 				ball.style.left = "0px";
-				ball.style.top = "0px";
 			}, 100)
 			return;
 		}
 		const place = place_to_cell(path_list[index][0], path_list[index][1]).getBoundingClientRect();
-		ball.style.left = `${place.left - (place.width / 2)}px`;
+		ball.style.left = `${place.left + (place.width / 2)}px`;
 		ball.style.top = `${place.top + (place.height / 2)}px`;
 		index++;
 	}, 100);
@@ -175,6 +176,9 @@ function maze_solvers() {
 	clear_grid();
 	grid_clean = false;
 	solving = true;
+	console.log('clicked')
+	console.log(solving)
+
 
 	if ((Math.abs(start_pos[0] - target_pos[0]) == 0 && Math.abs(start_pos[1] - target_pos[1]) == 1) ||
 		(Math.abs(start_pos[0] - target_pos[0]) == 1 && Math.abs(start_pos[1] - target_pos[1]) == 0)) {
