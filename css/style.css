@@ -43,7 +43,7 @@
 	#visualizer {
 		top: calc(35% + 10px);
 		left: 0 !important;
-		height: 70% !important;
+		height: calc(65% - 10px) !important;
 		width: 100% !important;
 	}
 }
