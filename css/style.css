@@ -54,6 +54,6 @@
 	z-index: 1000;
 	display: none;
 	transform: translate(-50%, -50%);
-	transition: 0.25s ease-in-out;
+	transition: 0.25s linear;
 	padding: 8px 8px 0 8px;
 }
