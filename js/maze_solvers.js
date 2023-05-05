@@ -39,7 +39,7 @@ function maze_solvers_interval() {
 
 function maze_solver_route() {
 	const ball = document.querySelector(".ball");
-	ball.style.display = "block";
+	// ball.style.display = "block";
 	let index = 0
 	my_interval = window.setInterval(function () {
 		if (index == path_list.length) {
@@ -52,14 +52,15 @@ function maze_solver_route() {
 			setTimeout(() => {
 				ball.style.display = "none";
 				ball.style.left = "0px";
-			}, 100)
+			}, 250)
 			return;
 		}
 		const place = place_to_cell(path_list[index][0], path_list[index][1]).getBoundingClientRect();
 		ball.style.left = `${place.left + (place.width / 2)}px`;
 		ball.style.top = `${place.top + (place.height / 2)}px`;
+		ball.style.display = "block";
 		index++;
-	}, 100);
+	}, 250);
 }
 function breadth_first() {
 	node_list = [];
