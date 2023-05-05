@@ -84,15 +84,18 @@
 .start
 {
 	background-image: url(../resources/shapes/start.svg);
-	background-size: calc(100%) calc(100%);
 }
 
 .target
 {
 	background-image: url(../resources/shapes/target.svg);
-	background-size: calc(100%) calc(100%);
+	
 }
-
+.start , .target{
+	background-size: calc(100%) calc(100%);
+	object-fit: cover;
+	cursor: pointer;
+}
 
 @media (max-width : 768px) {
 	#grid {
