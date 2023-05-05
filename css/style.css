@@ -49,19 +49,11 @@
 }
 
 .ball {
-	/* width: 8px; */
-	/* height: 8px; */
 	border-radius: 50%;
-	/* background-color: #fff; */
 	position: absolute;
 	z-index: 1000;
 	display: none;
 	transform: translate(-50%, -50%);
 	transition: 0.25s ease-in-out;
 	padding-top: 8px;
-	/* display: flex;
-	align-items: center;
-	justify-content: center; */
-	/* top: 87px; */
-	/* left: 15px; */
 }
