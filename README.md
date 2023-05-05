@@ -21,8 +21,8 @@ The web page is online at the address : **[maze_solver.vercel.app](https://maze_
 
 * **[Summary](#summary)**
 * **[Features](#features)**
-* **[Maze generation algorithms](#maze-generation-algorithms)
-* **[Path finding algorithms](#pathfinding-algorithms)
+* **[Maze generation algorithms](#maze-generation-algorithms)**
+* **[Path finding algorithms](#pathfinding-algorithms)**
 
 <br/>
 
